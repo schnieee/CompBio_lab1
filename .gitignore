@@ -11,6 +11,9 @@
 # Documentation
 /CompBio_LabAssignment1.pdf
 
+# Compiled Python files
+*.pyc
+
 # Temp & Cache files (should actually be in .git/info/excludes)
 *~
 *.orig
