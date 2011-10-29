@@ -1,0 +1,17 @@
+
+# Data dirs
+/1N0U
+/1AIU
+
+# Source archives
+/1N0U.zip
+/1AIU.zip
+/script_stups.zip
+
+# Documentation
+/CompBio_LabAssignment1.pdf
+
+# Temp & Cache files (should actually be in .git/info/excludes)
+*~
+*.orig
+
