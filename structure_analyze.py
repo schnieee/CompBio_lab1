@@ -44,6 +44,22 @@ if native_pdb is None:
 # Your code here!
 # Implement code that reads the score file and produces a energy vs. GDT_TS scatter plot. Don't forget to label the axis!
 
+print "reading and parsing the score file \"%s\" ..." % score_file
+try:
+    score_f = open(score_file, 'r')
+    line = score_f.readline()
+    while line != "":
+        parts = line.split()
+        name = parts[len(parts) - 1]
+        scores = []
+        for s in parts[1:len(parts) - 1]:
+		scores.append(float(s))
+        print name + ": "
+        print scores
+
+        line = score_f.readline()
+finally:
+    score_f.close()
 
 
 
