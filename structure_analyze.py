@@ -36,8 +36,10 @@ for opt, arg in opts:
 # If parameters are missing when launching the script, print usage
 if score_file is None:
     usage()
+    exit()
 if native_pdb is None:
     usage()
+    exit()
 
 # Your code here!
 # Implement code that reads the score file and produces a energy vs. GDT_TS scatter plot. Don't forget to label the axis!
