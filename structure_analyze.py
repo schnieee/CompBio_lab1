@@ -69,12 +69,11 @@ finally:
     score_f.close()
 
 
-
-
-
-
-
-
+# Create the mathplot graph
+scatter(gdts, scores)
+xlabel("GDT_TS")
+ylabel("Energy")
+pdbs = descriptions
 
 
 
@@ -94,7 +93,7 @@ finally:
 #pymol.finish_launching()
 
 #from pymol import cmd
-#show()
+show()
 ###/end Code that links the data to PymolLauncher
 
 
