@@ -40,4 +40,4 @@ class PymolLauncher(AnnoteFinder):
            self.drawnAnnotations[(x,y)] =(t,m)
            self.axis.figure.canvas.draw()
 
-	# Your code here!
+           # Your code here!
