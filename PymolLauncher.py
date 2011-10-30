@@ -41,3 +41,31 @@ class PymolLauncher(AnnoteFinder):
            self.axis.figure.canvas.draw()
 
            # Your code here!
+
+           import os.path
+
+           # Prepare names and paths
+           structNative = os.path.basename(self.native).split(".")[0]
+           structPredicted = annote
+           pathNative = self.native
+           pathPredicted = os.path.join(os.path.dirname(self.native), annote + ".pdb")
+
+           import pymol
+
+           # Load & arrange the native structure
+           cmd.load(pathNative)
+           cmd.do("hide everything, " + structNative)
+           cmd.do("show cartoon, " + structNative)
+           cmd.do("color white, " + structNative)
+
+           # Load & arrange the predicted structure
+           cmd.load(pathPredicted)
+           cmd.do("hide everything, " + structPredicted)
+           cmd.do("show cartoon, " + structPredicted)
+           cmd.do("color yellow, " + structPredicted)
+
+           # Allign the two sturctures
+           cmd.do("align " + structPredicted + ", " + structNative)
+           cmd.do("super " + structPredicted + ", " + structNative)
+           cmd.do("zoom")
+
