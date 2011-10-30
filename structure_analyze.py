@@ -73,6 +73,7 @@ finally:
 scatter(gdts, scores)
 xlabel("GDT_TS")
 ylabel("Energy")
+xlim(0.0, 1.0)
 pdbs = descriptions
 
 
