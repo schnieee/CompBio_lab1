@@ -80,17 +80,17 @@ pdbs = descriptions
 ### Code that links the data to the PymolLauncher Object
 ### Uncomment this if you have edited this file and are ready
 ### to link the PymolLauncher to the scatter plot
-#pl1 = PymolLauncher( gdt, scores, pdbs )
-#pl1.set_native(native_pdb)
-#connect('button_press_event', pl1)
-#gca().set_autoscale_on(False)
+pl1 = PymolLauncher( gdts, scores, pdbs )
+pl1.set_native(native_pdb)
+connect('button_press_event', pl1)
+gca().set_autoscale_on(False)
 
-#import __main__
-#__main__.pymol_argv = [ 'pymol']
+import __main__
+__main__.pymol_argv = [ 'pymol']
 
-#import pymol
+import pymol
 
-#pymol.finish_launching()
+pymol.finish_launching()
 
 #from pymol import cmd
 show()
